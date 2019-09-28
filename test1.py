@@ -27,6 +27,7 @@ def recognize_speech_from_mic(recognizer, microphone):
     # from the microphone
     with microphone as source:
         recognizer.adjust_for_ambient_noise(source)
+        
         audio = recognizer.listen(source)
 
     # set up the response object
@@ -47,6 +48,7 @@ def recognize_speech_from_mic(recognizer, microphone):
         response["error"] = "API unavailable"
     except sr.UnknownValueError:
         # speech was unintelligible
+        print("couldnt understand :(")
         response["error"] = "Unable to recognize speech"
 
     return response
@@ -55,8 +57,8 @@ def recognize_speech_from_mic(recognizer, microphone):
 if __name__ == "__main__":
     recognizer = sr.Recognizer()
     microphone = sr.Microphone(device_index=1)
-    print('Listening in 3...')
-    time.sleep(3)
+    print('Listening in 1...')
+    time.sleep(1)
     print('Listening now...')
     trans = recognize_speech_from_mic(recognizer, microphone)
     print(trans['transcription'])
