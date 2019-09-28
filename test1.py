@@ -2,6 +2,7 @@ import random
 import time
 
 import speech_recognition as sr
+from ibm_watson import SpeechToTextV1
 
 
 def recognize_speech_from_mic(recognizer, microphone):
@@ -23,6 +24,13 @@ def recognize_speech_from_mic(recognizer, microphone):
     if not isinstance(microphone, sr.Microphone):
         raise TypeError("`microphone` must be `Microphone` instance")
 
+    #  url = 'https://stream.watsonplatform.net/speech-to-text/api'
+    #  pwd = 'Rlj8ifTeuLS9XCooI3HPmP9wROs1PN6lSv2Uijg0a0tk'
+
+    # speech_to_text = SpeechToTextV1(
+        # iam_apikey = pwd,
+        # url = url
+        # )
     # adjust the recognizer sensitivity to ambient noise and record audio
     # from the microphone
     with microphone as source:
@@ -57,8 +65,6 @@ def recognize_speech_from_mic(recognizer, microphone):
 if __name__ == "__main__":
     recognizer = sr.Recognizer()
     microphone = sr.Microphone(device_index=1)
-    print('Listening in 1...')
-    time.sleep(1)
     print('Listening now...')
     trans = recognize_speech_from_mic(recognizer, microphone)
     print(trans['transcription'])
