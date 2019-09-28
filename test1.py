@@ -55,3 +55,8 @@ def recognize_speech_from_mic(recognizer, microphone):
 if __name__ == "__main__":
     recognizer = sr.Recognizer()
     microphone = sr.Microphone(device_index=1)
+    print('Listening in 3...')
+    time.sleep(3)
+    print('Listening now...')
+    trans = recognize_speech_from_mic(recognizer, microphone)
+    print(trans['transcription'])
