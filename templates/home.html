@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-
+{% import "bootstrap/wtf.html" as wtf %}
 {% block body %}
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,7 @@
 	<title>HomePage</title>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
 </head>
 <body>
 
@@ -46,9 +47,6 @@
 
 		
 		<div class = "m-t-30 m-b-20 p-t-20 result-tags">
-			<div class = "card tag m-l-20 m-r-20">
-				<h2> Name: Patrick Smith </h2>
-			</div>
 		</div>
 		</div>
 		<!-- Header -->
@@ -56,7 +54,7 @@
 		<div class = "col-lg-7 col-md-6">
 				<div class = "card m-t-100 transcript overflow-auto">
 					<div class= "card-body">
-						This is the transcript
+						{{wtf.quick_form(ems)}}
 					</div>
 				</div>
 		</div>

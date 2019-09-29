@@ -22,6 +22,20 @@ intentdict = {
     "fill_response_mode": "Fill response mode",
     "fill_transport_mode": "Fill transport mode"
 }
+paramsdict = {
+    "fill_incident": ['incident_number', 'unit_id', 'incident_date'],
+    "fill_address": ['address', 'city', 'state', 'zipcode'],
+    "fill_dispatch": ["complaint", "dispatch_performed", "level of service"],
+    "fill_disposition": ["disposition"],
+    "fill_patients_on_scene": ["number_patients_on_scene", "mass_casualty"],
+    "fill_request": ["type_of_service_requested", "primary_role_of_unit"],
+    "fill_cardiac_arrest": ["yes", "resuscitation", "cause"],
+    "fill_safety_equipment": ["equipment", "airbag_deployment"],
+    "fill_barriers": ["impairment"],
+    "fill_response_mode": ["mode"],
+    "fill_transport_mode": ["mode"]
+}
+
 months = {  0:"January", 
             1:"February",
             2:"March",
