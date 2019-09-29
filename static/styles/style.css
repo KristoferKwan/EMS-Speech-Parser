@@ -1,0 +1,30 @@
+.mic{
+    font-size: 3em;
+}
+
+.listen:hover{
+    cursor: pointer;
+    background-color: #D3D3D3;
+}
+
+.listen:active{
+    border-color: red;
+}
+
+.result-tags{
+    height: 20em;
+}
+
+.tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f66767;
+    color: white;
+    padding-left: 20px;
+    height: 60px;
+}
+
+.transcript{
+    height: 80vh;
+}
