@@ -25,13 +25,13 @@ def interpret_transcript():
         "fill_address": ['address', 'city', 'state', 'zipcode'],
         "fill_dispatch": ["complaint", "dispatch_performed", "level of service"],
         "fill_disposition": ["disposition"],
-        "fill_patients_on_scene": ["number_patients_on_scene", "mass_casualty"],
-        "fill_request": ["type_of_request_selected", "primary_role_of_unit", "service", "role"],
+        "fill_patients_on_scene": ["num_patients_on_scene", "mass_casualty"],
+        "fill_request": ["service", "role"],
         "fill_cardiac_arrest": ["cardiac_arrest", "resuscitation", "cardiac_cause"],
         "fill_safety_equipment": ["equipment", "airbag_deployment"],
         "fill_barriers": ["impairment"],
-        "fill_response_mode": ["mode"],
-        "fill_transport_mode": ["mode"]
+        "fill_response_mode": ["response_mode"],
+        "fill_transport_mode": ["transport_mode"]
     }
     access_token = '7J2X2UTJFDJ4FMPUQJ7ELNNOH5MUYHMD'
     client = Wit(access_token)
