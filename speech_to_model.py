@@ -4,7 +4,7 @@ import time
 import speech_recognition as sr
 import dateutil
 from wit import Wit
-
+import sys
 
 def interpret_transcript():
     intentdict = {
@@ -61,6 +61,7 @@ def interpret_transcript():
                 result[paramsdict[items['intent']][i]] = items[paramsdict[items['intent']][i]]
 
     print(result)
+    result['str_input'] = trans
     return result 
     
     
@@ -117,7 +118,5 @@ def recognize_speech_from_mic(recognizer, microphone):
         # speech was unintelligible
         print("couldnt understand :(")
         response["error"] = "Unable to recognize speech"
-
+    print(response, file=sys.stderr)
     return response
-
-interpret_transcript()

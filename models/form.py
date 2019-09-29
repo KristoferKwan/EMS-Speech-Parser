@@ -14,6 +14,5 @@ class EMSForm(FlaskForm):
     incident_zipcode = IntegerField('Incident Number', [validators.required()])
     incident_county = StringField('Incident County', [validators.Length(min=1, max=30)])
     incident_location_type = StringField("Incident Location Type", [validators.Length(min=1, max=100)])
-    complaint_reported_by_dispatch = DateTimeField(label='Start time',validators=[validators.InputRequired()],format = "%d%b%Y %H:%M",default= datetime.utcnow)
     disposition = SelectField('Activity Category Type', validators=[DataRequired()], choices=[('Treated Transport EMS', 'Treated Transport EMS'), ('Cancelled', 'Cancelled'), ('Treated and Released', 'Treated and Released'), ('No Patient Found', 'No Patient Found'), ('No Treatment Required', 'No Treatment Required'), ('Dead at Scene', 'Dead at Scene')])
     patient_name =  StringField('Incident Address', [validators.Length(min=1, max=100)]) 

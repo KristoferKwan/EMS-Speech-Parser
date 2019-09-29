@@ -6,7 +6,7 @@ const inputs = document.querySelectorAll(".form-control");
 function add_tags(response){
     for (var key in response) {
         if (response.hasOwnProperty(key)) {
-            tags.innerHTML += "	<div class = 'card tag m-l-20 m-r-20 m-b-20'> <h2>" + key + ": " +response[key] + " </h2> </div>"    
+            tags.innerHTML += "	<div class = 'card tag m-l-20 m-r-20 m-b-20'> <h2 class ='key-vals'>" + key + ": " +response[key] + " </h2> </div>"    
         }
     }
     for(var i = 0; i < inputs.length; i++){
